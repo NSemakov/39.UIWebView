@@ -14,6 +14,9 @@
 		84F2A5341B89012800AF1C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F2A5331B89012800AF1C44 /* Images.xcassets */; };
 		84F2A5371B89012800AF1C44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F2A5351B89012800AF1C44 /* LaunchScreen.xib */; };
 		84F2A5431B89012800AF1C44 /* _9__UIWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F2A5421B89012800AF1C44 /* _9__UIWebViewTests.m */; };
+		84F2A54E1B89030400AF1C44 /* NVWebViewUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F2A54D1B89030400AF1C44 /* NVWebViewUIViewController.m */; };
+		84F2A5521B89059600AF1C44 /* CAMediaTiming cheat sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F2A5501B89059600AF1C44 /* CAMediaTiming cheat sheet.pdf */; };
+		84F2A5551B8906B700AF1C44 /* JQC.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F2A5541B8906B700AF1C44 /* JQC.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		84F2A53C1B89012800AF1C44 /* 39. UIWebViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "39. UIWebViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F2A5411B89012800AF1C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F2A5421B89012800AF1C44 /* _9__UIWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _9__UIWebViewTests.m; sourceTree = "<group>"; };
+		84F2A54C1B89030400AF1C44 /* NVWebViewUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVWebViewUIViewController.h; sourceTree = "<group>"; };
+		84F2A54D1B89030400AF1C44 /* NVWebViewUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVWebViewUIViewController.m; sourceTree = "<group>"; };
+		84F2A5501B89059600AF1C44 /* CAMediaTiming cheat sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CAMediaTiming cheat sheet.pdf"; sourceTree = "<group>"; };
+		84F2A5541B8906B700AF1C44 /* JQC.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = JQC.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +88,13 @@
 		84F2A5251B89012800AF1C44 /* 39. UIWebView */ = {
 			isa = PBXGroup;
 			children = (
+				84F2A54F1B89059600AF1C44 /* Pdf */,
 				84F2A52A1B89012800AF1C44 /* AppDelegate.h */,
 				84F2A52B1B89012800AF1C44 /* AppDelegate.m */,
 				84F2A52D1B89012800AF1C44 /* ViewController.h */,
 				84F2A52E1B89012800AF1C44 /* ViewController.m */,
+				84F2A54C1B89030400AF1C44 /* NVWebViewUIViewController.h */,
+				84F2A54D1B89030400AF1C44 /* NVWebViewUIViewController.m */,
 				84F2A5301B89012800AF1C44 /* Main.storyboard */,
 				84F2A5331B89012800AF1C44 /* Images.xcassets */,
 				84F2A5351B89012800AF1C44 /* LaunchScreen.xib */,
@@ -117,6 +127,15 @@
 				84F2A5411B89012800AF1C44 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F2A54F1B89059600AF1C44 /* Pdf */ = {
+			isa = PBXGroup;
+			children = (
+				84F2A5501B89059600AF1C44 /* CAMediaTiming cheat sheet.pdf */,
+				84F2A5541B8906B700AF1C44 /* JQC.pdf */,
+			);
+			path = Pdf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +220,9 @@
 			files = (
 				84F2A5321B89012800AF1C44 /* Main.storyboard in Resources */,
 				84F2A5371B89012800AF1C44 /* LaunchScreen.xib in Resources */,
+				84F2A5551B8906B700AF1C44 /* JQC.pdf in Resources */,
 				84F2A5341B89012800AF1C44 /* Images.xcassets in Resources */,
+				84F2A5521B89059600AF1C44 /* CAMediaTiming cheat sheet.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F2A54E1B89030400AF1C44 /* NVWebViewUIViewController.m in Sources */,
 				84F2A52F1B89012800AF1C44 /* ViewController.m in Sources */,
 				84F2A52C1B89012800AF1C44 /* AppDelegate.m in Sources */,
 				84F2A5291B89012800AF1C44 /* main.m in Sources */,

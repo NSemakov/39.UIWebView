@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,128 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-eh-2Cr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="HFu-vK-3i6" style="IBUITableViewCellStyleDefault" id="820-3h-9Et">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="820-3h-9Et" id="5vi-8L-aXj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HFu-vK-3i6">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mzY-mi-1Qm" kind="show" identifier="segueShowWebView" trigger="accessoryAction" id="O4Q-qg-nF0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gcv-vu-Wco"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CbX-3g-rh2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WeE-eh-2Cr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dd5-he-DmP"/>
+                            <constraint firstAttribute="trailing" secondItem="WeE-eh-2Cr" secondAttribute="trailing" id="oQv-kE-4fm"/>
+                            <constraint firstItem="WeE-eh-2Cr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wB7-ac-LkT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WeE-eh-2Cr" secondAttribute="bottom" id="y2D-n3-J3Q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="WeE-eh-2Cr" id="ZPG-Nl-xQj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="233" y="415"/>
+        </scene>
+        <!--Web ViewUI View Controller-->
+        <scene sceneID="2rb-XS-BmK">
+            <objects>
+                <viewController id="mzY-mi-1Qm" customClass="NVWebViewUIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e1M-JL-foV"/>
+                        <viewControllerLayoutGuide type="bottom" id="oGz-ss-uWd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JAy-7G-ghz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRS-KL-qxi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mzY-mi-1Qm" id="S0F-4e-t3H"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSQ-c7-5Fl">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="i9n-pu-MrR">
+                                        <connections>
+                                            <action selector="actionBarButtonBack:" destination="mzY-mi-1Qm" id="ixG-E8-kp9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="na5-jW-5Tv">
+                                        <connections>
+                                            <action selector="actionBarButtonForward:" destination="mzY-mi-1Qm" id="Dl7-3M-s5s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jba-Tl-TLk"/>
+                                    <barButtonItem systemItem="refresh" id="TL2-cW-Uxo">
+                                        <connections>
+                                            <action selector="actionBarButtonRefresh:" destination="mzY-mi-1Qm" id="L9c-BD-k4w"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="78" style="plain" systemItem="fixedSpace" id="K3d-0u-AUt"/>
+                                    <barButtonItem systemItem="stop" id="EZ6-s5-LcO">
+                                        <connections>
+                                            <action selector="actionBarButtonClose:" destination="mzY-mi-1Qm" id="wFO-qM-kmY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="k0u-oa-ynd">
+                                <rect key="frame" x="282" y="259" width="37" height="37"/>
+                                <color key="color" red="1" green="0.0094222358914708426" blue="0.0081909093768670616" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VSQ-c7-5Fl" firstAttribute="top" secondItem="bRS-KL-qxi" secondAttribute="bottom" id="5tI-1w-2sq"/>
+                            <constraint firstAttribute="trailing" secondItem="VSQ-c7-5Fl" secondAttribute="trailing" id="AB5-E3-rOi"/>
+                            <constraint firstAttribute="centerY" secondItem="k0u-oa-ynd" secondAttribute="centerY" id="ClV-6R-ucB"/>
+                            <constraint firstItem="bRS-KL-qxi" firstAttribute="top" secondItem="JAy-7G-ghz" secondAttribute="top" constant="20" symbolic="YES" id="THT-Bd-yA4"/>
+                            <constraint firstAttribute="centerX" secondItem="k0u-oa-ynd" secondAttribute="centerX" id="VSN-cd-noY"/>
+                            <constraint firstItem="bRS-KL-qxi" firstAttribute="leading" secondItem="JAy-7G-ghz" secondAttribute="leading" id="c5R-YT-rPj"/>
+                            <constraint firstAttribute="trailing" secondItem="bRS-KL-qxi" secondAttribute="trailing" id="ft3-cA-KPT"/>
+                            <constraint firstItem="VSQ-c7-5Fl" firstAttribute="leading" secondItem="JAy-7G-ghz" secondAttribute="leading" id="qgf-LK-aUG"/>
+                            <constraint firstItem="oGz-ss-uWd" firstAttribute="top" secondItem="VSQ-c7-5Fl" secondAttribute="bottom" id="wjj-oD-jCE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="k0u-oa-ynd" id="neV-NZ-lB2"/>
+                        <outlet property="barButtonBack" destination="i9n-pu-MrR" id="Ewd-Bn-s4y"/>
+                        <outlet property="barButtonClose" destination="EZ6-s5-LcO" id="t4J-uZ-a7W"/>
+                        <outlet property="barButtonForward" destination="na5-jW-5Tv" id="lAm-SM-1RT"/>
+                        <outlet property="barButtonRefresh" destination="TL2-cW-Uxo" id="GST-DC-Jag"/>
+                        <outlet property="webView" destination="bRS-KL-qxi" id="2KF-NG-mDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvR-Nu-xdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="415"/>
         </scene>
     </scenes>
 </document>
